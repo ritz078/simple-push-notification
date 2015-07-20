@@ -1,0 +1,8 @@
+{
+  "name":"Simple push notification",
+  "short_name":"SPN",
+  "start_url":"./index.html",
+  "display":"standalone",
+  "gcm_sender_id":"522461456785",
+  "gcm_user_visible_only":true
+}
