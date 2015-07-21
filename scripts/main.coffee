@@ -1,15 +1,28 @@
 API_KEY='AIzaSyA5KLt3KqY8kbrZ26I8o50o4mfjgSwAEfM'
 
-createCurlCommand=(subscriptionDetails)->
+showCurlCommand=(subscriptionDetails)->
   command = 'curl --header "Authorization: key='+API_KEY+'" --header Content-Type:"application/json" '+subscriptionDetails.endpoint+' -d "{\\"registration_ids\\":[\\"'+subscriptionDetails.subscriptionId+'\\"]}"'
   document.querySelector('#cmd').innerHTML=command;
   return
 
+clearCurlCommand=()->
+  document.querySelector('#cmd').innerHTML=''
+
 if !navigator.serviceWorker
   return
 
+navigator.serviceWorker.ready.then((serviceWorkerRegistration)->
+  serviceWorkerRegistration.pushManager.getSubscription().then((subscription)->
+    if subscription
+      console.log subscription
+      document.querySelector('#subscribe').checked=true
+      showCurlCommand subscription
+      return
 
-navigator.serviceWorker.register('./sw.js',{scope:'./'})
+    ))
+
+
+navigator.serviceWorker.register('./sw1.js',{scope:'./'})
 .then(()->
   #check if push messaging is supported
   if !PushManager
@@ -45,7 +58,7 @@ subscribe =()->
       .then((subscriptionDetails)->
         #subscriptionDetails is an object with {endpoint, subscriptionID}
         console.log subscriptionDetails
-        createCurlCommand(subscriptionDetails)
+        showCurlCommand(subscriptionDetails)
         return
         )
         #incase there is an error
@@ -94,6 +107,8 @@ unSubscribe=()->
         if !successful
           console.log 'unable to unsubscribe from push'
           return
+
+        clearCurlCommand()
         ).catch((e)->
           console.log('Unsubscription error : ',e)
           return

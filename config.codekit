@@ -67,25 +67,25 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/sw.coffee": {
+	"\/sw1.coffee": {
 		"createSourceMap": 1,
 		"fileType": 32,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sw.coffee",
+		"inputAbbreviatedPath": "\/sw1.coffee",
 		"minifyOutput": 0,
-		"outputAbbreviatedPath": "\/sw.js",
+		"outputAbbreviatedPath": "\/sw1.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
 		},
-	"\/sw.js": {
+	"\/sw1.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sw.js",
-		"outputAbbreviatedPath": "\/min\/sw-min.js",
+		"inputAbbreviatedPath": "\/sw1.js",
+		"outputAbbreviatedPath": "\/min\/sw1-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
