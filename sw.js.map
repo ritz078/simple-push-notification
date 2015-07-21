@@ -1,0 +1,11 @@
+{
+  "sources" : [
+    "sw.coffee"
+  ],
+  "mappings" : ";AAAA;AAAA,EAAA,IAAI,CAAC,gBAAL,CAAsB,MAAtB,EAA6B,SAAC,CAAD,GAAA;AAC3B,IAAA,OAAO,CAAC,GAAR,CAAY,CAAC,CAAC,IAAd,CAAA,CAD2B;EAAA,CAA7B,CAAA,CAAA;AAAA",
+  "names" : [
+
+  ],
+  "file" : "sw.js",
+  "version" : 3
+}
